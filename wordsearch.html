@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Word Search</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="card">
+      <h1>Word Search</h1>
+      <p class="sub">Click and drag across letters to select a word.</p>
+      <div class="progress">
+        <span id="timer">⏱ 00:00</span>
+        <div class="progress-bar"><div id="progressFill"></div></div>
+        <span id="progressText">0 / 0 found</span>
+      </div>
+
+      <div class="board">
+        <div id="grid" aria-label="Word search grid"></div>
+      </div>
+
+      <ul id="words"></ul>
+      <div id="status"></div>
+      <button id="newBtn">New puzzle</button>
+    </main>
+
+    <div id="errorOverlay" role="alertdialog" aria-modal="true">
+      <div id="errorBox">
+        <h2>Error generating grid</h2>
+        <p id="errorText"></p>
+        <button id="errorClose">OK</button>
+      </div>
+    </div>
+
+    <script src="logic.js"></script>
+  </body>
+</html>
